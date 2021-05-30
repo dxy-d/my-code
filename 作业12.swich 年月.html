@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch 年份</title>
+</head>
+<body>
+    12.
+        设置一款程序  输入年份月份 判断这年这月有多少天(使用switch选择结构完成)
+        1/3/5/7/8/10/12月都是31天，2月28天，闰年2月29天，其他月份30天，
+
+
+
+
+        一般4年有一次闰年。
+
+        普通闰年：公历年份是4的倍数的，且不是100的倍数，为普通闰年。（如2004年就是闰年）；year%4==0 &&  year%100!==0
+
+        世纪闰年：公历年份是整百数的，必须是400的倍数才是世纪闰年（如1900年不是世纪闰年，2000年是世纪闰年）；year%400==0 
+        闰年（LeapYear）是为了弥补因人为历法规定造成的年度天数与地球实际公转周期的时间差而设立的。
+        补上时间差的年份为闰年。闰年共有366天（1－12月分别为31天，29天，31天，30天，31天，30天，31天，31天，30天，31天，30天，31天）。
+
+        凡阳历中有闰日（二月为二十九日）的年；闰余（岁余置闰。阴历每年与回归年相比所差的时日）；
+
+        注意闰年（公历中名词）和闰月（农历中名词）并没有直接的关联，公历中只分闰年和平年，平年有365天，
+        而闰年有366天（2月中多一天）；平年中也可能有闰月（如2017年是平年，农历有闰月，闰6月）。
+
+        <script>
+            var year =parseInt(prompt("请输入年份"));
+            var month =parseInt(prompt("请输入月份"));
+            // 闰年
+            if(year%4==0 &&  year%100!==0 ||year%400==0){
+            //    alert(year+"是闰年\n"+"全年:366天\n"+month+"月:")
+            
+            if(month==1|| month==3 ||month==5 || month==7|| month==8|| month==10|| month==12){
+                   alert(year+"年是闰年\n全年:366天,"+"\n"+month+"月:31天,")
+                
+                
+            // 不是1 3 5 7 8 10 12  
+                }else{  var month2=month; switch(month2)
+                    {
+                        
+
+                        case 2:
+                        alert(year+"年是闰年\n全年有:365天,\n2月份有:29天.");
+                        break;
+
+                        case 4:
+                        alert(year+"年是闰年\n全年有:365天,"+"\n"+month+"月有:30天.");
+                        break;
+
+                        case 6:
+                        alert(year+"年是闰年\n全年有:365天,"+"\n"+month+"月有:30天.");
+                        break;
+
+
+                        case 9:
+                        alert(year+"年是闰年\n全年有:365天,"+"\n"+month+"月有:30天.");
+                        break;
+
+                        case 11:
+                        alert(year+"年是闰年\n全年有:365天,"+"\n"+month+"月有:30天.");
+                        break;
+
+                        default:
+                         break;   
+
+
+                }
+
+                }
+
+            
+
+            }else{
+
+                  //平年 
+                if(month==1|| month==3 ||month==5 || month==7|| month==8|| month==10|| month==12){
+                   alert(year+"年是平年\n全年:365天,"+"\n"+month+"月:31天,")
+//  469 11
+                }else{
+                     
+                    var month1=month;
+                }
+            
+                switch(month1){
+                         
+
+                        case 2:
+                        alert(year+"年是平年\n全年有:365天,\n2月份有:28天.");
+                        break;
+
+                        case 4:
+                        alert(year+"年是平年\n全年有:365天,"+"\n"+month+"月有:30天.");
+                        break;
+
+                        case 6:
+                        alert(year+"年是平年\n全年有:365天,"+"\n"+month+"月有:30天.");
+                        break;
+
+
+                        case 9:
+                        alert(year+"年是平年\n全年有:365天,"+"\n"+month+"月有:30天.");
+                        break;
+
+                        case 11:
+                        alert(year+"年是平年\n全年有:365天,"+"\n"+month+"月有:30天.");
+                        break;
+                }
+            }
+        </script>
+</body>
+
+
+</html>

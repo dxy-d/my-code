@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火车票</title>
+</head>
+<body>
+    <!-- 9.(嵌套题目要求：假设从A地到B地的火车票有硬座和硬卧，价格分别为100和190元。
+    
+    根据铁路部门规定，未成年人（18周岁以下）身高不足120cm免票，120（含）-150（不含）cm需半票，
+    150及以上的需全票，未成年人卧铺只能减免硬座的半价。
+    请设计一个购票程序，要求输入年龄和身高（未成人需要输入）以及票的类型，输出票的价。
+
+
+    <script>
+
+        //成年人
+        var age=prompt("请输入年龄(例:12)");
+        if(age>18){
+        
+        var piao=prompt("请选择票型(硬座/卧铺)");
+        
+
+        if(piao=="硬座"){
+            alert("100");}
+
+
+            
+        if(piao=="卧铺") {
+         alert("190"); }else{
+             alert("输入错误\n请重新输入")
+         }
+
+
+        } 
+        
+         
+          else {
+        // 成年人 end
+
+       
+            // 身高 <120
+
+            var sg=prompt("身高")
+            if (sg<120){
+                var piao=prompt("请选择票型(硬座/卧铺)");
+                if(piao=="硬座"|| piao=="卧铺"){
+                alert("免票");  }else{
+                    alert("错误")
+                }
+           
+               } 
+            if (sg>=120 && sg<150){
+                var piao=prompt("请选择票型(硬座/卧铺)");
+                if (piao=="硬座"){
+                alert("50");}else{
+                    alert("错误")}
+                if (piao=="卧铺"){
+                alert("140");}else{
+                    alert("错误")}
+            }
+ 
+            // 150>=全票
+            if(sg>=150){
+                var piao=prompt("请选择票型(硬座/卧铺)")
+                if (piao=="硬座"){
+                alert("100");
+            }if (piao=="硬座"){
+                alert("100");
+            }else{
+                alert("输入错误了")
+            }
+
+
+
+                 
+            
+            } 
+           
+        }
+
+
+
+        // 
+       
+
+
+        
+    </script> -->
+     <!-- 9.(嵌套题目要求：假设从A地到B地的火车票有硬座和硬卧，价格分别为100和190元。
+    
+     根据铁路部门规定，未成年人（18周岁以下）身高不足120cm免票，120（含）-150（不含）cm需半票，
+     150及以上的需全票，未成年人卧铺只能减免硬座的半价。
+     请设计一个购票程序，要求输入年龄和身高（未成人需要输入）以及票的类型，输出票的价。
+  -->
+
+    <script>
+        // 判断年龄
+          var age=parseInt(prompt(""))
+            // 成年 age>18
+           if (age>18){
+
+                var type=(parseInt(prompt("请输入票型(硬座/硬卧)")));
+
+                if(type=="硬卧"){
+                    alert("100");
+                }else{
+                    alert("190");
+                }
+            //  未成年 年龄<18
+           }else{
+                var height=(parseInt(prompt("请输入身高")));
+                if(height<120){
+
+                    var type=(parseInt(prompt("请输入票型(硬座/硬卧)")));
+                // 身高 height>120 && height<150
+                }else if(height>120 && height<150){
+
+                    var type=(parseInt(prompt("请输入票型(硬座/硬卧)")));
+                        
+                        if(type=="硬卧"){
+                            alert("50");
+                    }else{
+                            alert("140");
+                    }
+               
+               
+               
+                // 身高 height>150
+                }else{
+                    if(height>150){
+
+                        var type=(parseInt(prompt("请输入票型(硬座/硬卧)")));
+    
+                            if(type=="硬卧"){
+                                 alert("100");
+                                    }else{
+                                alert("190");
+                                    }
+                    
+                                }
+                            }
+            
+                }
+
+
+
+                
+               
+ 
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+    </script>
+</body>
+</html>

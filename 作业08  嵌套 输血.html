@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输血</title>
+</head>
+<body>
+    8.(嵌套)题目要求：根据性别和体重计算输血量 
+    。女性体重不超过50kg的输血量为200毫升，
+    否则250毫升；男性不超过60kg的输血量为250毫升，
+    否则300毫升
+    。
+
+
+    <script>
+
+        var sex =prompt("请输入性别(男/女)");
+         if (sex=="女"){
+             var weight=prompt("请输入体重(kg)");
+             if(weight<=50){
+
+                alert("输血量为:200ml");
+             }else{
+                
+                 
+
+                 alert("输血量为:250ml");}
+             
+              }
+            else{
+                if(sex=="男"){
+                   var weight=prompt("请输入体重(例:80)");
+                   if(weight<=60){
+                       alert("输血量为250ml");
+                   }else{
+                       alert("输血量为300ml");
+                   }
+                }else {
+                    alert("输入错误");
+                }
+            }   
+
+
+
+
+    </script>
+
+
+</body>
+</html>
